@@ -3,7 +3,7 @@ package br.com.caelum.jdbc.teste;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import br.com.caelum.jdbc.ConnectionFactory;
+import br.com.caelum.Connectionjdbc.ConnectionFactory;
 
 public class TestaConexao {
 //Testar conexão
