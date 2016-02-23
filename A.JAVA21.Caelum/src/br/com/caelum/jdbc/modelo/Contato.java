@@ -6,7 +6,7 @@ public class Contato {
 	private long id;
 	private String nome;
 	private String email;
-	private String endereoco;
+	private String endereco;
 	private Calendar dataNascimento;
 	
 	public long getId() {
@@ -28,10 +28,10 @@ public class Contato {
 		this.email = email;
 	}
 	public String getEndereoco() {
-		return endereoco;
+		return endereco;
 	}
 	public void setEndereoco(String endereoco) {
-		this.endereoco = endereoco;
+		this.endereco = endereoco;
 	}
 	public Calendar getDataNascimento() {
 		return dataNascimento;
