@@ -1,7 +1,7 @@
 package br.com.caelum.jdbc.modelo;
 
 import java.util.Calendar;
-//classe contato 
+//classe contato push e commit
 public class Contato {
 	private long id;
 	private String nome;
