@@ -6,7 +6,7 @@ import java.util.Scanner;
 import br.com.caelum.jdbc.dao.ContatoDAO;
 import br.com.caelum.jdbc.modelo.Contato;
 
-public class GetContatoForId {
+public class TestaGetContatoForId {
 
 	public static void main(String[] args) {
 		Scanner dados = new Scanner(System.in);
