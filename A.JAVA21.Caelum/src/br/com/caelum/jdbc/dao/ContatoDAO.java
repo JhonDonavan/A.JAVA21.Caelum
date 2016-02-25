@@ -74,7 +74,8 @@ public class ContatoDAO {
 		public List<Contato> GetContatoForId(long id){
 			try{
 				List<Contato> contatos = new ArrayList<Contato>();
-				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where id = " + id);
+				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where"
+																						+ " id = " + id);
 				ResultSet rs = stmt.executeQuery();
 				
 				
@@ -96,6 +97,38 @@ public class ContatoDAO {
 				stmt.close();
 				return contatos;
 			
+				
+			}catch (SQLException e){
+				throw new RuntimeException(e);
+			}
+			
+		}
+		
+		public List<Contato> GetContatosForName(String nome){
+			try{
+				List<Contato> contatos = new ArrayList<Contato>();
+				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where + "
+																				+ "nome like" + nome + '%');
+				ResultSet rs = stmt.executeQuery();
+				
+				while (rs.next()){
+					Contato contato = new Contato();
+					contato.setId(rs.getLong("id"));
+					contato.setNome(rs.getString("nome"));
+					contato.setEmail(rs.getString("email"));
+					contato.setEndereoco(rs.getString("endereco"));
+					
+					Calendar data = Calendar.getInstance();
+					data.setTime(rs.getDate("dataNascimento"));
+					contato.setDataNascimento(data);
+					
+					contatos.add(contato);
+					
+				}
+				
+				rs.close();
+				stmt.close();
+				return contatos;
 				
 			}catch (SQLException e){
 				throw new RuntimeException(e);
