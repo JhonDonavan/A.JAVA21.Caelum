@@ -107,8 +107,7 @@ public class ContatoDAO {
 		public List<Contato> GetContatosForName(String nome){
 			try{
 				List<Contato> contatos = new ArrayList<Contato>();
-				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where + "
-																				+ "nome like" + nome + '%');
+				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where nome like "+"'nome%'" );
 				ResultSet rs = stmt.executeQuery();
 				
 				while (rs.next()){

@@ -10,9 +10,9 @@ public class TestaInsere {
 	public static void main(String[] args) {
 		//pronto para gravar
 		Contato contato = new Contato();
-		contato.setNome("Flavia Lucia");
-		contato.setEmail("flavialucia@gmail.com");
-		contato.setEndereoco("Saracuruna - Duque de caxias");
+		contato.setNome("Joao Emmanuel");
+		contato.setEmail("GJoaoemmanuel@gmail.com");
+		contato.setEndereoco("Campo Grande - Rio de Janeiro");
 		contato.setDataNascimento(Calendar.getInstance());
 
 		//gravar na conexao
