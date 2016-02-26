@@ -1,6 +1,7 @@
 package br.com.caelum.jdbc.teste;
 
 import java.util.Calendar;
+import java.util.Scanner;
 
 import br.com.caelum.jdbc.dao.ContatoDAO;
 import br.com.caelum.jdbc.modelo.Contato;
@@ -8,11 +9,26 @@ import br.com.caelum.jdbc.modelo.Contato;
 public class TestaInsere {
 
 	public static void main(String[] args) {
-		//pronto para gravar
+		
+		Scanner dados = new Scanner (System.in);
+		
+		System.out.println("Digite o Nome do contato: \n");
+		String nome = dados.nextLine().toLowerCase();
+		
+		System.out.println("Digite o email do contato: \n");
+		String email = dados.nextLine().toLowerCase();
+		
+		System.out.println("Digite o endereco do contato: \n");
+		String endereco = dados.nextLine().toLowerCase();
+		
 		Contato contato = new Contato();
-		contato.setNome("ELIANE MARIA");
-		contato.setEmail("ELIANE.REYS2@gmail.com");
-		contato.setEndereco("DUQUE DE CAXIAS - RIO DE JANEIRO");
+		
+	
+		//pronto para gravar
+		
+		contato.setNome(nome);
+		contato.setEmail(email);
+		contato.setEndereco(endereco);
 		contato.setDataNascimento(Calendar.getInstance());
 
 		//gravar na conexao
