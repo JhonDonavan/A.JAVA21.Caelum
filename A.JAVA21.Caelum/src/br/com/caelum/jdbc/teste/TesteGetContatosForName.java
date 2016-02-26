@@ -29,12 +29,12 @@ public class TesteGetContatosForName {
 		else{
 		for (Contato contato : contatos){
 			System.out.println("Id: " + contato.getId());
-			System.out.println("nome: " + contato.getNome());
+			System.out.println("Nome: " + contato.getNome());
 			System.out.println("Email: " + contato.getEmail());
-			System.out.println("nome: " + contato.getEndereco());
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+			System.out.println("Endereco: " + contato.getEndereco());
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			String dataFormatada = sdf.format(contato.getDataNascimento().getTime());
-			System.out.println("Data de nascimento: " + dataFormatada );
+			System.out.println("Data de nascimento: " + dataFormatada + "\n");
 			}
 		}
 
