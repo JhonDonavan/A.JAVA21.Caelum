@@ -14,8 +14,10 @@ public class TesteGetContatosForName {
 		Scanner dados = new Scanner(System.in);
 		
 		String nome;
+		
 		System.out.println("Digite um nome para pesquisar");
-		nome = dados.next();
+		nome = dados.next().toLowerCase();
+		
 		
 		ContatoDAO dao = new ContatoDAO();
 		
