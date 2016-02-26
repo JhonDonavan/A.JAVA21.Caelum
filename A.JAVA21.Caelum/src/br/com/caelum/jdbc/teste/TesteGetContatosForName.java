@@ -29,7 +29,7 @@ public class TesteGetContatosForName {
 			System.out.println("Id: " + contato.getId());
 			System.out.println("nome: " + contato.getNome());
 			System.out.println("Email: " + contato.getEmail());
-			System.out.println("nome: " + contato.getEndereoco());
+			System.out.println("nome: " + contato.getEndereco());
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 			String dataFormatada = sdf.format(contato.getDataNascimento().getTime());
 			System.out.println("Data de nascimento: " + dataFormatada );

@@ -27,10 +27,10 @@ public class Contato {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getEndereoco() {
+	public String getEndereco() {
 		return endereco;
 	}
-	public void setEndereoco(String endereoco) {
+	public void setEndereco(String endereoco) {
 		this.endereco = endereoco;
 	}
 	public Calendar getDataNascimento() {

@@ -31,7 +31,7 @@ public class TestaLista {
 		for (Contato  contato  : contatos){
 			System.out.println("Nome: " + contato.getNome());
 			System.out.println("Email: " + contato.getEmail()); 
-			System.out.println("Endereço: "+ contato.getEndereoco());
+			System.out.println("Endereço: "+ contato.getEndereco());
 			SimpleDateFormat sfd = new SimpleDateFormat("dd/MM/yyyy");
 			String dataformatada = sfd.format(contato.getDataNascimento().getTime());
 			System.out.println("Data de nascimento: " + dataformatada + "\n");

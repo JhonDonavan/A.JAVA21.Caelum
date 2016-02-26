@@ -27,9 +27,9 @@ public class ContatoDAO {
 				//prepare statement para inserção
 				PreparedStatement stmt = connection.prepareStatement(sql);
 				//seta os valores
-				stmt.setString(1, contato.getNome());
-				stmt.setString(2, contato.getEmail());
-				stmt.setString(3,contato.getEmail());
+				stmt.setString(1, contato.getNome().toLowerCase());
+				stmt.setString(2, contato.getEmail().toLowerCase());
+				stmt.setString(3,contato.getEndereco().toLowerCase());
 				stmt.setDate(4, new Date( 
 						contato.getDataNascimento().getTimeInMillis())); 
 				
@@ -52,7 +52,7 @@ public class ContatoDAO {
 				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("Nome"));
 				contato.setEmail(rs.getString("Email"));
-				contato.setEndereoco(rs.getString("endereco"));
+				contato.setEndereco(rs.getString("endereco"));
 				
 				//mostrar Data atraves do Calendar
 				Calendar data = Calendar.getInstance(); 
@@ -84,7 +84,7 @@ public class ContatoDAO {
 				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("nome"));
 				contato.setEmail(rs.getString("Email"));
-				contato.setEndereoco(rs.getString("endereco"));
+				contato.setEndereco(rs.getString("endereco"));
 				
 				Calendar data = Calendar.getInstance(); 
 				data.setTime(rs.getDate("dataNascimento"));
@@ -115,7 +115,7 @@ public class ContatoDAO {
 					contato.setId(rs.getLong("id"));
 					contato.setNome(rs.getString("nome"));
 					contato.setEmail(rs.getString("email"));
-					contato.setEndereoco(rs.getString("endereco"));
+					contato.setEndereco(rs.getString("endereco"));
 					
 					Calendar data = Calendar.getInstance();
 					data.setTime(rs.getDate("dataNascimento"));
