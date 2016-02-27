@@ -19,6 +19,8 @@ public class TesteGetContatosForName {
 		nome = dados.next().toLowerCase();
 		
 		
+		
+		
 		ContatoDAO dao = new ContatoDAO();
 		
 		List<Contato> contatos  = dao.GetContatosForName(nome);

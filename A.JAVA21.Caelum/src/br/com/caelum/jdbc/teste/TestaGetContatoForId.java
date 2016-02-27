@@ -12,6 +12,7 @@ public class TestaGetContatoForId {
 		Scanner dados = new Scanner(System.in);
 		
 		long id;
+		
 		System.out.println("Digite o Id  do contato a ser pesquisado: ");
 		id = dados.nextLong();
 		
@@ -19,7 +20,7 @@ public class TestaGetContatoForId {
 	
 		List<Contato> contatos = dao.GetContatoForId(id);
 		if (contatos.isEmpty()){
-			System.out.println("Contato nao encontrado");
+			System.out.println("Contato não encontrado");
 		}
 		else {
 			for (Contato contato : contatos){
