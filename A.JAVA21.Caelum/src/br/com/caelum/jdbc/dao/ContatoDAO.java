@@ -162,7 +162,7 @@ public class ContatoDAO {
 			String sql ="delete from contatos where id = ?";
 			try{
 				PreparedStatement stmt = connection.prepareStatement(sql);
-				stmt.setLong(1,contato.getId());
+				stmt.setLong(1, contato.getId());
 				stmt.executeQuery();
 				stmt.close();
 				
