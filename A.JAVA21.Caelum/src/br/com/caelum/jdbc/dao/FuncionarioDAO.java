@@ -32,4 +32,20 @@ public class FuncionarioDAO {
 				throw new RuntimeException(e); 
 			}
 		}
+		
+		public void removeFuncionario(long remover){
+			String sql = "delete from funcionarios  where id = ? ";
+			
+			try {
+				PreparedStatement stmt = connection.prepareStatement(sql);
+				stmt.setLong(1, remover);
+				
+				stmt.execute();
+				stmt.close();
+			}catch(SQLException e){
+				throw new RuntimeException(e);
+			}
+		}
+		
+		
 }
